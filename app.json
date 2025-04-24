@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c99e0ff2-dd05-4d7a-9f70-a0a2329ac2ea"
+      }
+    },
+    "owner": "pgomezzy"
   }
 }
