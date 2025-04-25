@@ -1,8 +1,9 @@
-import {SafeAreaView, View, Text, StyleSheet, Image, TouchableOpacity } from "react-native"
+import {SafeAreaView, View, Text, StyleSheet, Image } from "react-native"
 import {  useNavigation, NavigationContainer } from "@react-navigation/native";
+import { TextInput } from "react-native-paper";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Button } from "@react-navigation/elements";
-
+import React from 'react';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,10 +45,17 @@ return(
 function UrlPage(){
   const navigation = useNavigation();
 
+  const [text, setText] = React.useState('');
+  
   return(
-    <View>
-      <Text>uh ere eleeeeeeeeee</Text>
-    </View>
+
+    <View style={styles.conteiner}>
+      <Image style={styles.logo} source={require('./src/assets/guardianLogo.png')}/>
+      <TextInput style={styles.input} label='URL' value={text} onChangeText={text => setText(text)}/>
+    </  View>
+
+    
+    
   )
 }
 function ArquivoPage() {
@@ -55,8 +63,9 @@ function ArquivoPage() {
 
   return(
 
-    <View>
-      <Text> arquivooo </Text>
+    <View style={styles.conteiner}> 
+      <Image style={styles.logo} source={require('./src/assets/guardianLogo.png')}/>
+      <Text> arquivoooo </Text>
     </View>
   )
 }
@@ -88,5 +97,11 @@ const styles = StyleSheet.create({
     gap: 30,
     marginBottom: 10,
     marginTop: 10,
-  }
+  },
+  input: {
+    margin: 12,
+    borderWidth: 1,
+    flexDirection: 'row',
+    backgroundColor: '#a7b0c4'
+  },
 })
