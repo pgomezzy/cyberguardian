@@ -14,12 +14,6 @@ Projeto desenvolvido em React Native que tem como objetivo trazer um pouco mais 
   - ZIP, RAR (compactados)
   - JS, PY, SH (scripts)
 
-### 📊 **Relatórios**
-- Score de reputação (0-100)
-- Lista de detecções
-- Metadados técnicos:
-  - Características do arquivo
-  - Histórico de análises
  
 # 🔧 Tecnologias
 - API VirusTotal
