@@ -7,7 +7,7 @@ import React from 'react';
 import home from "./src/views/home";
 import Arquivo from "./src/views/Arquivo";
 import UrlPage from "./src/views/Url"
-
+import Construção from "./src/views/emConstrução";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +33,11 @@ return(
           component={UrlPage}
           options={{headerStyle: {backgroundColor: '#031a32'}, headerTintColor: '#a6a6a6'}}  
           /> 
+        <Stack.Screen 
+          name='Construção'
+          component={Construção}
+          options={{headerStyle: {backgroundColor: '#031a32'}, headerTintColor: '#a6a6a6'}}  
+          />
      </Stack.Navigator>
   </NavigationContainer>
 )

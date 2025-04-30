@@ -14,13 +14,14 @@ export default function UrlPage(){
     return(
   
       <View style={styles.conteiner}>
-        <Image style={styles.logo} source={require('./assets/guardianLogo.png')}/>
+        <Image style={styles.logo} source={require('../assets/guardianLogo.png')}/>
         <TextInput 
           style={styles.input}
           label='URL' 
           value={text} 
           onChangeText={text => setText(text)}
           type={'outlined'}/>
+          <Button title='home' onPress={() => navigation.navigate('Construção')}>Verificar URL</Button>
       </  View>
   
       
@@ -58,6 +59,7 @@ export default function UrlPage(){
       margin: 12,
       borderWidth: 1,
       flexDirection: 'row',
-      backgroundColor: '#a7b0c4'
+      backgroundColor: '#a7b0c4',
+      width: 300,
     },
   })
