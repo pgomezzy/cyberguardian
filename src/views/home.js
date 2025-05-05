@@ -1,10 +1,8 @@
 import {SafeAreaView, View, Text, StyleSheet, Image } from "react-native"
 import {  useNavigation, NavigationContainer } from "@react-navigation/native";
-import { TextInput } from "react-native-paper";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Button } from "@react-navigation/elements";
 import React from 'react';
-
+import Botao from "../components/botao";
 export default function Home(){
  
   const navigation = useNavigation();
@@ -20,8 +18,8 @@ export default function Home(){
         <Text style={styles.textos}>Use nosso app para verificar se seu arquivo ou url são confiáveis!</Text>
       </View>
       <View style={styles.botoes}>
-        <Button onPress={() => navigation.navigate('Arquivo')}>Arquivo</Button>
-        <Button onPress={() => navigation.navigate('URL')}>URL</Button>
+        <Botao onPress={() => navigation.navigate('Arquivo')} text='Arquivo' icon='archive'/>
+        <Botao onPress={() => navigation.navigate('URL')} text='URL' icon='web'/>
       </View>
     </SafeAreaView>
   )

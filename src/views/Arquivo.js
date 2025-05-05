@@ -1,9 +1,8 @@
-import {SafeAreaView, View, Text, StyleSheet, Image } from "react-native"
-import {  useNavigation, NavigationContainer } from "@react-navigation/native";
-import { TextInput } from "react-native-paper";
+import { View, Text, StyleSheet, Image } from "react-native"
+import {  useNavigation } from "@react-navigation/native";
 import { Button } from "@react-navigation/elements";
 import React from 'react';
-
+import Botao from '../components/botao'
 
 export default function Arquivo() {
 
@@ -13,7 +12,12 @@ export default function Arquivo() {
 
     <View style={styles.conteiner}> 
       <Image style={styles.logo} source={require('../assets/guardianLogo.png')}/>
-      <Button title='home' onPress={() => navigation.navigate('Construção')}>Verificar Arquivo</Button>
+      {/* <Button title='home' onPress={() => navigation.navigate('Construção')}>Verificar Arquivo</Button> */}
+      <Botao onPress={() => navigation.navigate('Construção')}
+        text='Arquivo'
+        icon='archive'
+        />
+
       <Text> arquivoooo </Text>
     </View>
   )
@@ -38,12 +42,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize : 15,
     color: '#a6a6a6'
-  },
-  botoes: {
-    flexDirection: 'row',
-    gap: 30,
-    marginBottom: 10,
-    marginTop: 10,
   },
   input: {
     margin: 12,

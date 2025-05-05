@@ -1,9 +1,9 @@
 import {SafeAreaView, View, Text, StyleSheet, Image } from "react-native"
-import {  useNavigation, NavigationContainer } from "@react-navigation/native";
+import {  useNavigation} from "@react-navigation/native";
 import { TextInput } from "react-native-paper";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Button } from "@react-navigation/elements";
 import React from 'react';
+import Botao from "../components/botao";
+
 
 
 export default function UrlPage(){
@@ -18,10 +18,15 @@ export default function UrlPage(){
         <TextInput 
           style={styles.input}
           label='URL' 
+          placeholder="Digite a URL"
           value={text} 
+          mode="outlined"
+          textColor="#a6a6a6"
           onChangeText={text => setText(text)}
-          type={'outlined'}/>
-          <Button title='home' onPress={() => navigation.navigate('Construção')}>Verificar URL</Button>
+          theme={{colors:{primary: '#758fc8'}}}/>
+          
+          <Botao onPress={() => navigation.navigate('Construção')} 
+            text='Verificar URL' icon='web'/>
       </  View>
   
       
@@ -35,10 +40,6 @@ export default function UrlPage(){
       alignItems: 'center',
       backgroundColor: "#031a32",
     },
-    textoCabeçalho: {
-      color: '#a6a6a6', 
-      fontSize: 20
-    },
     logo: {
       width: 300, 
       height: 170,
@@ -49,17 +50,11 @@ export default function UrlPage(){
       fontSize : 15,
       color: '#a6a6a6'
     },
-    botoes: {
-      flexDirection: 'row',
-      gap: 30,
-      marginBottom: 10,
-      marginTop: 10,
-    },
     input: {
       margin: 12,
-      borderWidth: 1,
+      borderColor: '',
       flexDirection: 'row',
-      backgroundColor: '#a7b0c4',
+      backgroundColor: '#031a32',
       width: 300,
     },
   })
