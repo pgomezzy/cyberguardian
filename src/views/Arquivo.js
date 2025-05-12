@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from "react-native"
+import { View, Text, StyleSheet, Image, ImageBackground } from "react-native"
 import {  useNavigation } from "@react-navigation/native";
 import { Button } from "@react-navigation/elements";
 import React from 'react';
@@ -9,25 +9,25 @@ export default function Arquivo() {
   const navigation = useNavigation();
 
   return(
-
+    <ImageBackground style={{flex: 1, width: '100%',
+      height: '100%',}}source={require('../assets/BackGround.png')}>
     <View style={styles.conteiner}> 
       <Image style={styles.logo} source={require('../assets/guardianLogo.png')}/>
-      {/* <Button title='home' onPress={() => navigation.navigate('Construção')}>Verificar Arquivo</Button> */}
       <Botao onPress={() => navigation.navigate('Construção')}
         text='Arquivo'
         icon='archive'
         />
 
-      <Text> arquivoooo </Text>
+      <Text> arquivooo </Text>
     </View>
+    </ImageBackground>
   )
 }
 const styles = StyleSheet.create({
   conteiner: {
     flex:1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: "#031a32",
+    
   },
   textoCabeçalho: {
     color: '#a6a6a6', 
@@ -35,13 +35,17 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 300, 
-    height: 170,
+    height: 300,
+    marginTop: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   textos: {
     justifyContent: 'center',
     textAlign: 'center',
     fontSize : 15,
-    color: '#a6a6a6'
+    color: '#a6a6a6',
+    height: 75
   },
   input: {
     margin: 12,

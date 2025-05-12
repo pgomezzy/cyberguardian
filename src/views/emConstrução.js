@@ -1,11 +1,10 @@
-import {SafeAreaView, View, Text, StyleSheet, Image } from "react-native"
-import {  useNavigation, NavigationContainer } from "@react-navigation/native";
-import { TextInput } from "react-native-paper";
-import { Button } from "@react-navigation/elements";
+import { View, Text, StyleSheet, Image } from "react-native"
 import React from 'react';
 
 
 export default function Construção(){
+
+
     return(
         <View style={styles.conteiner}>
             <Image style={styles.logo} source={require('../assets/guardianLogo.png')} />

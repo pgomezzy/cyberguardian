@@ -1,11 +1,13 @@
-import {  useNavigation, NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from 'react';
 import home from "./src/views/home";
 import Arquivo from "./src/views/Arquivo";
 import UrlPage from "./src/views/Url"
 import Construção from "./src/views/emConstrução";
+import Constants from 'expo-constants';
 
+console.log('🔑 API KEY:', Constants.expoConfig.extra.VIRUS_TOTAL_API_KEY);
 const Stack = createNativeStackNavigator();
 
 
@@ -40,6 +42,8 @@ return(
 )
 
 }
+
+
 
 
 
