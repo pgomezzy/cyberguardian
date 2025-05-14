@@ -1,6 +1,5 @@
-import {SafeAreaView, View, Text, StyleSheet, Image, ImageBackground } from "react-native"
+import { View, Text, StyleSheet, Image, ImageBackground } from "react-native"
 import {  useNavigation, NavigationContainer } from "@react-navigation/native";
-import React from 'react';
 import Botao from "../components/botao";
 
 export default function Home(){
@@ -9,11 +8,11 @@ export default function Home(){
 
   return(
   <ImageBackground style={{flex: 1, width: '100%',
-    height: '100%',}}source={require('../assets/BackGround2.png')}>
+    height: '100%',}}source={require('../assets/BackGroundPagPrincipal.png')}>
     <View style={styles.conteiner}>
       <Image style={styles.logo} source={require('../assets/guardianLogo.png')}/>
       <View>
-        <Text style={styles.textoCabeçalho}>Fique Seguro!!</Text>
+        <Text style={styles.textoCabecalho}>Fique Seguro!!</Text>
       </View>
       <View>
         <Text style={styles.textos}>Use nosso app para verificar se seu arquivo ou url são confiáveis!</Text>
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
       flex:1,
       alignItems: 'center',
     },
-    textoCabeçalho: {
+    textoCabecalho: {
       color: '#a6a6a6', 
       fontSize: 20
     },

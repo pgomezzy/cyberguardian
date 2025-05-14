@@ -5,9 +5,8 @@ import home from "./src/views/home";
 import Arquivo from "./src/views/Arquivo";
 import UrlPage from "./src/views/Url"
 import Construção from "./src/views/emConstrução";
-import Constants from 'expo-constants';
 
-console.log('🔑 API KEY:', Constants.expoConfig.extra.VIRUS_TOTAL_API_KEY);
+
 const Stack = createNativeStackNavigator();
 
 

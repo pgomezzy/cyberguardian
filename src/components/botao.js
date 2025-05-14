@@ -2,9 +2,14 @@ import { Button } from 'react-native-paper';
 import { StyleSheet} from "react-native";
 
 
-const Botao = ({onPress, text, icon}) =>(
+const Botao = ({onPress, text, icon, disabled}) =>(
     
-   <Button mode='outlined' icon={icon} theme={{colors: {primary: '#758fc8', outline: '#a7b0c4'}}} onPress={onPress} >{text}</Button>
+   <Button 
+      mode='outlined'
+      icon={icon}
+      theme={{colors: {primary: '#758fc8', outline: '#a7b0c4'}}}
+      onPress={onPress} disabled={disabled} >{text}
+    </Button>
 )
 
 const styles = StyleSheet.create({
