@@ -22,6 +22,37 @@ Projeto desenvolvido em React Native que tem como objetivo trazer um pouco mais 
 - Node.js
 - Expo
 - Axios
+# Arquitetura do Projeto
+
+## Estrutura de Diretórios
+
+- **src/**  
+  - **assets/**  
+    _(Arquivos estáticos como imagens)_
+  - **components/**   
+    _(Componentes reutilizáveis da interface)_
+  - **constants/**    
+    _(Constantes usadas na aplicação, URLs da API)_
+  - **services/**   
+    _(Serviços para integração com API do VirusTotal)_
+  - **utils/** 
+    _(Funções utilitárias, como cache de dados)_
+  - **views/**    
+    _(Páginas principais da aplicação)_
+  - `app.config.js`  
+  _(Configurações gerais da aplicação)_
+  - `App.js`  
+  _(Componente principal da aplicação)_
+
+## Arquivos de Configuração
+- `app.json`  
+_(Configurações específicas do app)_
+- `package.json`  
+_(Dependências e scripts do projeto)_
+- `package-lock.json`  
+_(Lockfile para controle de versões das dependências)_
+- `README.md`  
+_(Documentação inicial do projeto)_
 
 ## 🚀 Como executar
 
